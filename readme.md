@@ -1,4 +1,7 @@
-# JKT48 Member Sorter Lite Version
+# JKT48 Member Sorter - Lite Version
+
+Versi 2.0
+- Digabung dengan JKT48 Member Sorter
 
 Versi 1.2
 - Photopack diperbarui menjadi photopack yang ada di Digital Photobook ke 10, Cara Ceroboh untuk Mencinta
