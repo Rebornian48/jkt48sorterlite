@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,120 +21,114 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta name="author" content="Rebornian48" />
-    <title>JKT48 Member Sorter (Lite Version)</title>
-    <script
-      type="text/javascript"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
-    ></script>
-    <script type="text/javascript" src="../sorter/js/mod_k-factory.js"></script>
-    <script type="text/javascript" src="../sorter/js/fnc_main_v3.js"></script>
-    <script
-      type="text/javascript"
-      src="../sorter/js/fnc_datamemberlite.js"
-    ></script>
-    <script type="text/javascript" src="../sorter/js/op.js"></script>
-    <script type="text/javascript" src="../sorter/js/src.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../sorter/css/kcs_style.css" />
-    <link rel="stylesheet" type="text/css" href="../sorter/css/style.css" />
-    <link rel="shortcut icon" href="../assets/img/logo.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebornian48</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/80138640"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <!-- Core theme CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
-  <body onload="startup()">
-    <div id="menubar">
-      <div class="menu-item menu-link" id="menu-restart"><p>Restart</p></div>
-      <div class="menu-item">
-        <p>Battle No. <span id="lblCount">-</span></p>
+<body>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">Rebornian48</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <div class="dropdown mb-5">
+          <div tabindex="0" role="button" class="m-1">
+            Tema
+            <svg
+              width="12px"
+              height="12px"
+              class="h-2 w-2 fill-current opacity-60 inline-block"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2048 2048"
+            >
+              <path
+                d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+              ></path>
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
+          >
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Gelap"
+                value="dark"
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Terang"
+                value="light"
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Malam"
+                value="night"
+              />
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                aria-label="Senja"
+                value="sunset"
+              />
+            </li>
+          </ul>
+        </div>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content flex-col lg:flex-row">
+      <img src="https://avatars.githubusercontent.com/u/80138640" class="max-w-sm rounded-lg shadow-2xl" />
+      <div>
+        <h1 class="text-5xl font-bold">Rebornian48 - JKT48 Sorter Lite</h1>
+        <p class="py-6">Terima kasih atas perhatiannya selama ini, saat ini JKT48 Sorter Lite akan digabung jadi satu di dalam JKT48 Member Sorter, sehingga situs ini sudah tidak akan dipakai lagi.</p>
+        <a
+            href="https://rebornian48.github.io"
+            class="btn btn-error"
+            role="button"
+            >Situs utama</a
+          >
+        </div>
       </div>
-      <div class="menu-item">
-        <p><span id="lblProgress">0</span>% sorted</p>
-      </div>
-      <a href="https://github.com/Rebornian48/" target="_blank">
-        <div class="menu-item menu-link menu-right"><p>Github</p></div>
-      </a>
-      <a href="https://rebornian48.github.io" target="_blank">
-        <div class="menu-item menu-link menu-right"><p>Homepage</p></div>
-      </a>
-      <a href="https://twitter.com/Rebornian48" target="_blank">
-        <div class="menu-item menu-link menu-right"><p>Contact</p></div>
-      </a>
-      <a href="../assets/music/tyfm.mp3" download>
-        <div class="menu-item menu-link menu-right"><p>Download MP3</p></div>
-      </a>
     </div>
-
-    <div align="center">
-      <table id="mainTable">
-        <thead>
-          <tr>
-            <td colspan="5" class="tb_header" align="center">
-              <br /><br />
-              <h1>JKT48 Member Sorter (Lite Version)</h1>
-              <h1>"Thank You For Memories" Edition</h1>
-              <br />
-            </td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td id="fldLeft" onclick="fnc_Sort(-1);" rowspan="2">
-              <img src="../assets/img/tyfm.png" />
-            </td>
-            <td style="border: 0px; width: 7px" rowspan="2"></td>
-            <td id="fldMiddleT" onclick="fnc_Sort(0);">
-              <p>JKT48 Member Sorter</p>
-              <p>(Lite Version)</p>
-            </td>
-            <td style="border: 0px; width: 7px" rowspan="2"></td>
-            <td id="fldRight" onclick="fnc_Sort(1);" rowspan="2">
-              <img src="../assets/img/tyfm.png" />
-            </td>
-          </tr>
-          <tr>
-            <td id="fldMiddleB" onclick="fnc_Undo();">Click to start!</td>
-          </tr>
-        </tbody>
-
-        <tfoot>
-          <tr>
-            <td colspan="3">
-              <div align="center">
-                <br />
-                <input id="optImage" checked="checked" type="checkbox" />
-                <span class="tb_header">Display images while sorting.</span>
-              </div>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-    <br />
-    <table id="optTable" align="center" width="450"></table>
-    <br />
-
-    <div
-      id="ranTable"
-      width="640px"
-      class="tb"
-      style="display: none"
-      align="center"
-    >
-      <form>
-        <input
-          id="btn-rawtext"
-          value="Raw Text Results"
-          onclick="OpenWnd()"
-          type="button"
-        />
-        <!-- <input id="btn-ss" value="Screenshot" onclick="takeshot()" type="button"> -->
-      </form>
-    </div>
-
-    <div class="style4" id="resultField" style="text-align: center"></div>
-  </body>
-  <audio loop autoplay>
-    <source src="../assets/music/tyfm.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
+  </div>
+</body>
 </html>
